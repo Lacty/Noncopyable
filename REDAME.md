@@ -1,1 +1,3 @@
-Noncopyable
+## Noncopyable
+
+- このクラスを継承したクラスはコピー不可にする
