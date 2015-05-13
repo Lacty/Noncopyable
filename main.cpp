@@ -3,10 +3,6 @@
 
 
 class Noncopyable {
-public:
-  // コンストラクタ、デストラクタ：空
-  Noncopyable() {};
-  ~Noncopyable() {};
 private:
   // Noncopyableの機能↓
   // Object obj = other; 禁止
@@ -14,6 +10,10 @@ private:
 
   // obj = other; 禁止
   Noncopyable operator = (const Noncopyable&) = delete;
+
+  // コンストラクタ,デストラクタ default指定
+  Noncopyable() = default;
+  ~Noncopyable() = default;
 };
 
 class Object : public Noncopyable {
