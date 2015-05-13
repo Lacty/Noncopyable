@@ -4,9 +4,9 @@
 
 class Noncopyable {
 public:
-  // コンストラクタ、デストラクタは各自にまかせる
-  Noncopyable() = default;
-  ~Noncopyable() = default;
+  // コンストラクタ、デストラクタ：空
+  Noncopyable() {};
+  ~Noncopyable() {};
 private:
   // Noncopyableの機能↓
   // Object obj = other; 禁止
