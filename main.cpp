@@ -15,18 +15,24 @@ protected:
   virtual ~Noncopyable() {};
 };
 
+
+// ここまでがNoncopyable
+//---------------------------------------------------------
+
+#include <iostream>
+
 class Object : public Noncopyable {
 private:
   int val;
 public:
   // コピーコンストラクタ
   /*Object(const Object& obj) {
-    *this = obj;
+  *this = obj;
   }*/
   // 代入演算子
   /*Object& operator =(const Object& obj) {
-    this->val = obj.val;
-    return *this;
+  this->val = obj.val;
+  return *this;
   }*/
   Object() {
     std::cout << "Objectのコンストラクタが呼ばれました" << std::endl;
