@@ -1,10 +1,9 @@
 
-#include <iostream>
+#pragma once
 
 
 class Noncopyable {
-private:
-  // Noncopyableの機能↓
+protected:
   // Object obj = other; 禁止
   Noncopyable(const Noncopyable&) = delete;
 
@@ -13,7 +12,7 @@ private:
 
   // コンストラクタ,デストラクタ default指定
   Noncopyable() = default;
-  ~Noncopyable() = default;
+  virtual ~Noncopyable() {};
 };
 
 class Object : public Noncopyable {
